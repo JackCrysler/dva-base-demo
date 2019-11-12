@@ -1,12 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import dva from 'dva'
+import createLoading from 'dva-loading'
+import routerConfig from './router'
+// 创建dva程序
+let app = dva({
+    // initialState:{},
+    onStateChange(fn){
+        // console.log(JSON.stringify(fn))
+        // console.log('state changed')
+    },
+    onError(e) {
+        console.error(e.message, /* duration */3);
+    },
+    // onAction(){
+    //     return ()=>{}
+    // }
+})
+app.use(createLoading())
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// 注册dva路由
+app.router(routerConfig)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// 启动dva
+app.start('#root')
