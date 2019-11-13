@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import {connect} from 'dva'
 import styles from './login.module.css'
 
 class index extends Component {
