@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://127.0.0.1:7001",
   "dependencies": {
-    "codemirror": "^5.49.2",
+    "codemirror": "^5.58.2",
     "dva": "^2.4.1",
     "dva-loading": "^3.0.17",
     "markdown-it": "^10.0.0",
