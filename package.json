@@ -7,7 +7,7 @@
     "codemirror": "^5.49.2",
     "dva": "^2.4.1",
     "dva-loading": "^3.0.17",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
